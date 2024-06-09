@@ -1,5 +1,5 @@
 {
-  description = "A very basic flake";
+  description = "A falke to build Ghidra with all plugins required for reversing and fuzzing the AMD PSP";
 
   inputs = {
     nixpkgs.url = "github:vringar/nixpkgs/ghidra-ret-sync";
@@ -12,15 +12,16 @@
         let
           pkgs = nixpkgs.legacyPackages.${system};
           ghidraWithName = pkgs.callPackage ./package.nix { };
+          my_extensions = pkgs.callPackage ./extensions.nix {ghidra = ghidraWithName;};
           ghidraWithExtensions = ghidraWithName.withExtensions
             (p: with p; [
               machinelearning
-              ret-sync
+              my_extensions.ret-sync
             ]);
         in
         with pkgs; {
           packages = {
-            default = ghidraWithName;
+            default = ghidraWithExtensions;
           };
           devShells.default = mkShell {
             buildInputs = [
