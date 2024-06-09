@@ -2,7 +2,7 @@
   description = "A falke to build Ghidra with all plugins required for reversing and fuzzing the AMD PSP";
 
   inputs = {
-    nixpkgs.url = "github:vringar/nixpkgs/ghidra-ret-sync";
+    nixpkgs.url = "nixpkgs/nixos-unstable";
     flake-utils.url = "github:numtide/flake-utils";
   };
 
@@ -17,6 +17,7 @@
             (p: with p; [
               machinelearning
               my_extensions.ret-sync
+              my_extensions.lightkeeper
             ]);
         in
         with pkgs; {

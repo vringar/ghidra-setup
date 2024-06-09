@@ -5,6 +5,6 @@ lib.makeScope newScope (self: {
 
   ret-sync = self.callPackage ./extensions/ret-sync { };
 
-  sleighdevtools = self.callPackage ./extensions/sleighdevtools { inherit ghidra; };
+  lightkeeper = self.callPackage ./extensions/lightkeeper { };
 
 })
