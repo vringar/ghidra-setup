@@ -1,4 +1,5 @@
-{ fetchFromGitHub
+{ lib
+, fetchFromGitHub
 , buildGhidraExtension
 }:
 buildGhidraExtension {
@@ -6,10 +7,10 @@ buildGhidraExtension {
   version = "1.0.2";
 
   src = fetchFromGitHub {
-    owner = "WorksButNotTested";
+    owner = "vringar";
     repo = "lightkeeper";
-    rev = "1.0.2";
-    sha256 = "sha256-P+6lNhuHrXUfZ+1UZ2dxzdbM0pdE6q8Yi4mdcMFqumk=";
+    rev = "master";
+    sha256 = "sha256-NPSU1pY3qWfUTq5s3vpe1G4EHDu2sAqmZ3oROT/bY/s=";
   };
 
   preBuild = ''
