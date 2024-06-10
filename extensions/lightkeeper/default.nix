@@ -4,15 +4,14 @@
 }:
 buildGhidraExtension {
   pname = "lightkeeper";
-  version = "1.0.2";
+  version = "1.0.5";
 
   src = fetchFromGitHub {
     owner = "WorksButNotTested";
     repo = "lightkeeper";
-    rev = "1.0.2";
-    sha256 = "sha256-P+6lNhuHrXUfZ+1UZ2dxzdbM0pdE6q8Yi4mdcMFqumk=";
+    rev = "1.0.5";
+    sha256 = "sha256-HgeO3FKxn+hfM/QMufrqKC1AIhlrRivMeB6GDFDg/Jc="; # lib.fakeSha256
   };
-  patches = [ ./0001-fix-package-name.patch ];
   preBuild = ''
     cd lightkeeper
   '';
