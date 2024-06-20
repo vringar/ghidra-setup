@@ -7,10 +7,10 @@ buildGhidraExtension {
   version = "1.0.5";
 
   src = fetchFromGitHub {
-    owner = "WorksButNotTested";
+    owner = "vringar";
     repo = "lightkeeper";
-    rev = "1.0.5";
-    sha256 = "sha256-HgeO3FKxn+hfM/QMufrqKC1AIhlrRivMeB6GDFDg/Jc="; # lib.fakeSha256
+    rev = "feat/color-fix";
+    sha256 = "sha256-22MFJ9aYSiPvpXLiwdZVhxgERC9QjpO7EvHnblHJHFo="; # lib.fakeSha256;
   };
   preBuild = ''
     cd lightkeeper
