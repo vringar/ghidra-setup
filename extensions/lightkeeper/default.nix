@@ -1,6 +1,8 @@
 { lib
+, gradle
 , fetchFromGitHub
 , buildGhidraExtension
+, lightkeeper
 }:
 buildGhidraExtension {
   pname = "lightkeeper";
@@ -15,7 +17,10 @@ buildGhidraExtension {
   preBuild = ''
     cd lightkeeper
   '';
-
+  mitmCache = gradle.fetchDeps {
+    pkg = lightkeeper;
+    data = ./deps.json;
+  };
   meta = {
     description = "A port of the Lighthouse plugin to GHIDRA.";
     homepage = "https://github.com/WorksButNotTested/lightkeeper";

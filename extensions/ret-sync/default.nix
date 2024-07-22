@@ -2,6 +2,8 @@
 , fetchFromGitHub
 , buildGhidraExtension
 , ghidra
+, gradle
+, ret-sync
 }:
 buildGhidraExtension {
   pname = "ret-sync-ghidra";
@@ -17,7 +19,10 @@ buildGhidraExtension {
   preBuild = ''
     cd ext_ghidra
   '';
-
+  mitmCache = gradle.fetchDeps {
+    pkg = ret-sync;
+    data = ./deps.json;
+  };
   preInstall = ''
     correct_version=$(ls dist | grep ${ghidra.version})
     mv dist/$correct_version dist/safe.zip
