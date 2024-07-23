@@ -14,7 +14,7 @@ buildGhidraExtension {
     rev = "1.1.0";
     sha256 = "sha256-S8yNn56A2CvrIBsq0RoBx0qOjrYDZSv1IVTxGmlL4Js="; # lib.fakeSha256;
   };
-  preBuild = ''
+  preConfigure = ''
     cd lightkeeper
   '';
   mitmCache = gradle.fetchDeps {

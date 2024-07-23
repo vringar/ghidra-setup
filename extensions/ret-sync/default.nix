@@ -16,7 +16,7 @@ buildGhidraExtension {
     sha256 = "sha256-+G5ccdHnFL0sHpueuIYwLRU9FhzN658CYqQCHCBwxV4=";
   };
 
-  preBuild = ''
+  preConfigure = ''
     cd ext_ghidra
   '';
   mitmCache = gradle.fetchDeps {
