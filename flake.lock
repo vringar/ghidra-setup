@@ -20,16 +20,16 @@
     },
     "nixpkgs": {
       "locked": {
-        "lastModified": 1722006642,
-        "narHash": "sha256-SsDy+teAGrGgdduanABlQGKhEI4hlx7FwtkbdKca3P4=",
+        "lastModified": 1722512466,
+        "narHash": "sha256-HM9hj02WzN/9YlFkMM2GNElafszRoJJrZBbI9Ezr/hM=",
         "owner": "vringar",
         "repo": "nixpkgs",
-        "rev": "2f2724e133705da8653406b22beea17c8de9322b",
+        "rev": "b6f1fe77408866d2ee621c1e9ce39ddeb6a821be",
         "type": "github"
       },
       "original": {
         "owner": "vringar",
-        "ref": "fix/ghidra-extensions",
+        "ref": "ghidra-ret-sync",
         "repo": "nixpkgs",
         "type": "github"
       }
