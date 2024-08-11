@@ -14,10 +14,10 @@
           ghidraWithName = pkgs.callPackage ./package.nix { };
           ghidraWithExtensions = ghidraWithName.withExtensions
             (p: with p; [
-              #machinelearning
-              #sleighdevtools
-              #gnudisassembler
-              #ghidraninja-ghidra-scripts
+              machinelearning
+              sleighdevtools
+              gnudisassembler
+              ghidraninja-ghidra-scripts
               ret-sync
               lightkeeper
             ]);
