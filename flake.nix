@@ -14,6 +14,7 @@
           ghidraWithName = pkgs.callPackage ./package.nix { };
           ghidraWithExtensions = ghidraWithName.withExtensions
             (p: with p; [
+              # findcrypt
               machinelearning
               sleighdevtools
               gnudisassembler
